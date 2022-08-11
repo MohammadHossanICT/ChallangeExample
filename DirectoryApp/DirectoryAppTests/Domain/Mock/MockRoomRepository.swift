@@ -9,7 +9,6 @@ import Foundation
 @testable import DirectoryApp
 
 final class MockRoomRepository: RoomsRepository {
-    
     var roomsRecords: [Room]?
 
     func getRooms() async throws -> [Room] {
@@ -18,7 +17,6 @@ final class MockRoomRepository: RoomsRepository {
        }
       return  roomsRecords!
     }
-    
     func enqueueRoomsRecords(roomsRecords: [Room]) {
         self.roomsRecords = roomsRecords
     }

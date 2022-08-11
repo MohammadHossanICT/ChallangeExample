@@ -18,6 +18,6 @@ struct RoomsDTO: Decodable {
 
 extension RoomsDTO {
     func toDomain() -> Room {
-        return Room(createdAt:createdAt, occupiedMessage: isOccupied ? "Occupied" :"Not Occupied", maxOccupancy: maxOccupancy, id: id)
+        return Room(createdAt: createdAt, occupiedMessage: isOccupied ? "Occupied": "Not Occupied", maxOccupancy: maxOccupancy, id: id)
     }
 }

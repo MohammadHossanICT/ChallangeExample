@@ -8,11 +8,9 @@
 import Foundation
 
 protocol PeopleDetailsContract {
-    var people: People{ get }
+    var people: People { get }
 }
-
 final class PeopleDetailsViewModel: PeopleDetailsContract {
-    
     var people: People
     init(people: People) {
         self.people = people

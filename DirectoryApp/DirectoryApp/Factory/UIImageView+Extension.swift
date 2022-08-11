@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 extension UIImageView {
-   static func createImageView()-> UIImageView {
+   static func createImageView() -> UIImageView {
        let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView

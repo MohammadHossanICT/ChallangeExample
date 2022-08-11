@@ -15,7 +15,7 @@ protocol PeoplesViewBehaviour: AnyObject {
 }
 
 protocol PeopleViewModelAction {
-    func navigateToDetails(for index:Int)
+    func navigateToDetails(for index: Int)
 }
 
 protocol PeopleViewModelInput {

@@ -13,7 +13,6 @@ final class PeopleViewModel: PeopleViewModelOutput {
     private weak var coordinator: Coordinator?
     var peoples: [People] = []
     weak var view: PeoplesViewBehaviour?
-    
     init(peopleUseCase: PeopleUseCase,
          coordinator: AppCoordinator) {
         self.peopleUseCase = peopleUseCase
@@ -28,21 +27,18 @@ extension PeopleViewModel: PeopleViewModelAction {
 }
 
 extension PeopleViewModel: PeopleViewModelInput {
-    
-    func getPeopleImage(for index: Int, completion:@escaping (Data) -> Void)  {
+    func getPeopleImage(for index: Int, completion: @escaping (Data) -> Void) {
         Task {
             do {
-                let imageData =  try await peopleUseCase.getImage(for:peoples[index].avatar)
+                let imageData =  try await peopleUseCase.getImage(for: peoples[index].avatar)
 
                 DispatchQueue.main.async {
                     completion(imageData)
                 }
-            }catch {
-                
+            } catch {
             }
         }
     }
-    
     func getPeoples() async {
         view?.showActivityIndicator()
         do {
@@ -53,4 +49,3 @@ extension PeopleViewModel: PeopleViewModelInput {
         }
     }
 }
-

@@ -17,14 +17,12 @@ final class MockPeopleRepository: PeoplesRepository {
         }
        return  peoplesRecords!
     }
-    
     func getImages(for url: String) async throws -> Data {
         if url == "invalid" {
             throw  APIError.invalidData
         }
         return url.data(using: .utf8)!
-    }
-    
+    }    
     func enqueuePeopelesRecords(peoplesRecords: [People]) {
         self.peoplesRecords = peoplesRecords
     }

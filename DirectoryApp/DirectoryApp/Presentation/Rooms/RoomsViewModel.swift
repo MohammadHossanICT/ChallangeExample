@@ -8,7 +8,6 @@
 import Foundation
 
 final class RoomsViewModel: RoomsViewModelOutput {
-    
     private var roomsUseCase: RoomsUseCase
 
     internal var rooms: [Room] = []
@@ -31,4 +30,3 @@ extension RoomsViewModel: RoomsViewModelInput {
         }
     }
 }
-

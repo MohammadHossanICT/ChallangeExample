@@ -16,6 +16,4 @@ class DirectoryAppUITestsLaunchTests: XCTestCase {
     override func setUpWithError() throws {
         continueAfterFailure = false
     }
-
-    
 }
